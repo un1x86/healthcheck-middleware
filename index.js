@@ -42,7 +42,7 @@ module.exports = function(options) {
 				failureInfo.message = err.message;
 			}
 
-			res.status(500).json(failureInfo);
+			res.json(500,failureInfo);
 		}
 
 		function onPass(passInfo) {
@@ -66,7 +66,7 @@ module.exports = function(options) {
 				};
 			}
 
-			res.status(200).json(info);
+			res.json(200,info);
 		}
 	};
 };
